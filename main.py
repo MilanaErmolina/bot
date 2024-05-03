@@ -6,3 +6,9 @@ from handlers import include_routers
 bot = Bot(token="7157439516:AAHTbVmmNgfIu4L0iLJSkBjfqORLcvXZ_tY")
 dp = Dispatcher()
 
+async def main():
+    include_routers(dp)
+    await dp.start_polling(bot)
+
+if __name__ == '__main__':
+    asyncio.run(main())
